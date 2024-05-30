@@ -17,6 +17,9 @@ struct Profile: View {
     @State private var isNeedToOpenTermsScreen: Bool = false
     @State private var isNeedToOpenPrivacy: Bool = false
     
+    @Environment(\.openURL) private var openURL
+    
+    
     var body: some View {
         
         ScrollView(.vertical) {
@@ -125,8 +128,6 @@ struct Profile: View {
                                 isNeedToOpenFeedbackScreen.toggle()
                             }
                     }
-                    
-                    NavigationLink(destination: EmptyView(), isActive: $isNeedToOpenTermsScreen) {
                         RoundedRectangle(cornerRadius: 14)
                             .fill(Colors.middleGray)
                             .frame(height: 50)
@@ -144,12 +145,12 @@ struct Profile: View {
                                 .padding(.vertical, 13)
                             }
                             .onTapGesture {
-                                hideTabBar()
-                                isNeedToOpenTermsScreen.toggle()
+                                openURL(URL(string: "https://sites.google.com/view/pictoria-dev/terms-and-conditions")!)
+//                                hideTabBar()
+//                                isNeedToOpenTermsScreen.toggle()
                             }
-                    }
                     
-                    NavigationLink(destination: EmptyView(), isActive: $isNeedToOpenPrivacy) {
+                    
                         RoundedRectangle(cornerRadius: 14)
                             .fill(Colors.middleGray)
                             .frame(height: 50)
@@ -167,10 +168,11 @@ struct Profile: View {
                                 .padding(.vertical, 13)
                             }
                             .onTapGesture {
-                                hideTabBar()
-                                isNeedToOpenPrivacy.toggle()
+                                openURL(URL(string: "https://sites.google.com/view/pictoria-dev/privacy-policy")!)
+//                                hideTabBar()
+//                                isNeedToOpenPrivacy.toggle()
                             }
-                    }
+                    
                 }
                 .padding(.horizontal, 16)
                 .padding(.top, 29)
