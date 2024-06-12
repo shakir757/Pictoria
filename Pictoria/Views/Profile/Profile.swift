@@ -16,6 +16,8 @@ struct Profile: View {
     @State private var isNeedToOpenFeedbackScreen: Bool = false
     @State private var isNeedToOpenTermsScreen: Bool = false
     @State private var isNeedToOpenPrivacy: Bool = false
+    @State private var isNeedToOpenBest: Bool = false
+
     
     @Environment(\.openURL) private var openURL
     
@@ -172,6 +174,50 @@ struct Profile: View {
 //                                hideTabBar()
 //                                isNeedToOpenPrivacy.toggle()
                             }
+                    
+                    RoundedRectangle(cornerRadius: 14)
+                        .fill(Colors.middleGray)
+                        .frame(height: 50)
+                        .overlay(alignment: .leading) {
+                            HStack(spacing: 10) {
+                                Image("website")
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                
+                                Text("Developer website")
+                                    .foregroundStyle(Colors.deepBlue)
+                                    .font(.system(size: 17, weight: .bold))
+                            }
+                            .padding(.leading, 12)
+                            .padding(.vertical, 13)
+                        }
+                        .onTapGesture {
+                            openURL(URL(string: "https://sites.google.com/view/pictoria-dev/developers-website")!)
+//                                hideTabBar()
+//                                isNeedToOpenPrivacy.toggle()
+                        }
+                    NavigationLink(destination: MyBestPhotos(), isActive: $isNeedToOpenBest) {
+                        RoundedRectangle(cornerRadius: 14)
+                             .fill(Colors.middleGray)
+                             .frame(height: 50)
+                             .overlay(alignment: .leading) {
+                                 HStack(spacing: 10) {
+                                     Image("myBestPhotos")
+                                         .resizable()
+                                         .frame(width: 24, height: 24)
+                                     
+                                     Text("My best photos")
+                                         .foregroundStyle(Colors.deepBlue)
+                                         .font(.system(size: 17, weight: .bold))
+                                 }
+                                 .padding(.leading, 12)
+                                 .padding(.vertical, 13)
+                             }
+                             .onTapGesture {
+                                 hideTabBar()
+                                 isNeedToOpenBest.toggle()
+                             }
+                    }
                     
                 }
                 .padding(.horizontal, 16)

@@ -69,6 +69,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
                         self.parent.selectedImage = image
                     }
                 } else if selectedImages.count == 1 {
+                    print("KJKJK SELECTED ONLY ONE")
                     // Если выбрана только одна фотография
                     self.parent.selectedImage = selectedImages.first
                 } else {

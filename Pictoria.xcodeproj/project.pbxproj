@@ -43,6 +43,8 @@
 		EBC686342C05C95600D747A6 /* InitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC686332C05C95600D747A6 /* InitView.swift */; };
 		EBC686362C05CAAA00D747A6 /* WrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC686352C05CAAA00D747A6 /* WrapperView.swift */; };
 		EBC6863A2C0718D900D747A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBC686392C0718D900D747A6 /* GoogleService-Info.plist */; };
+		EBEBF5942C1A0A4C006C4DD3 /* BestPhotoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBF5932C1A0A4C006C4DD3 /* BestPhotoScreen.swift */; };
+		EBEBF5962C1A1DB2006C4DD3 /* MyBestPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBF5952C1A1DB2006C4DD3 /* MyBestPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		EBC686332C05C95600D747A6 /* InitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitView.swift; sourceTree = "<group>"; };
 		EBC686352C05CAAA00D747A6 /* WrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperView.swift; sourceTree = "<group>"; };
 		EBC686392C0718D900D747A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBEBF5932C1A0A4C006C4DD3 /* BestPhotoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPhotoScreen.swift; sourceTree = "<group>"; };
+		EBEBF5952C1A1DB2006C4DD3 /* MyBestPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBestPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 				4520FB1E2BF1F10F00018ED8 /* EditScreen.swift */,
 				4520FB202BF2087500018ED8 /* EditPhotoScreen.swift */,
 				4520FB222BF2088D00018ED8 /* EditScreenOnboarding.swift */,
+				EBEBF5932C1A0A4C006C4DD3 /* BestPhotoScreen.swift */,
+				EBEBF5952C1A1DB2006C4DD3 /* MyBestPhotos.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -352,12 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBEBF5942C1A0A4C006C4DD3 /* BestPhotoScreen.swift in Sources */,
 				4520FB2E2BF47B9F00018ED8 /* CollageOnboarding.swift in Sources */,
 				EBC686322C05C66C00D747A6 /* Constants.swift in Sources */,
 				45CD6B382BF70EA700B78388 /* CustomSlider.swift in Sources */,
 				4520FB212BF2087500018ED8 /* EditPhotoScreen.swift in Sources */,
 				4520FB282BF44BD900018ED8 /* Profile.swift in Sources */,
 				EBC686342C05C95600D747A6 /* InitView.swift in Sources */,
+				EBEBF5962C1A1DB2006C4DD3 /* MyBestPhotos.swift in Sources */,
 				45CD6B352BF70E8500B78388 /* CGAffineTransform+Extensions.swift in Sources */,
 				4520FB132BF1D70D00018ED8 /* MainScreen.swift in Sources */,
 				4520FB162BF1D78500018ED8 /* Colors.swift in Sources */,
